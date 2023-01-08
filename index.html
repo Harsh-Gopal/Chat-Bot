@@ -12,3 +12,33 @@
     <div id="chatbox"></div>
   </body>
 </html>
+
+
+
+function sendMessage() {
+  // get the message from the user
+  var message = document.getElementById("message").value;
+  
+  // clear the message field
+  document.getElementById("message").value = "";
+  
+  // add the user's message to the chat box
+  document.getElementById("chatbox").innerHTML += "<p>User: " + message + "</p>";
+  
+  // send the message to the chat bot and get a response
+  var response = getResponse(message);
+  
+  // add the chat bot's response to the chat box
+  document.getElementById("chatbox").innerHTML += "<p>Bot: " + response + "</p>";
+}
+
+function getResponse(message) {
+  if (message === "hi") {
+    return "Hello! How are you today?";
+  } else if (message === "how are you") {
+    return "I'm just a computer program, so I don't have feelings. But I'm here to help you with any questions you might have.";
+  } else {
+    return "I'm sorry, I didn't understand your message. Could you please rephrase it?";
+  }
+}
+
