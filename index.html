@@ -1,17 +1,35 @@
 <html>
   <head>
     <title>My Chat Bot</title>
+    <style>
+      /* add some style to make the chatbot more visually appealing */
+      #chatbox {
+        border: 1px solid black;
+        width: 300px;
+        height: 300px;
+        overflow: auto; /* add a scrollbar if the chat history gets too long */
+      }
+      #message {
+        width: 250px; /* make the text input field wider */
+      }
+      button {
+        width: 50px; /* make the button wider */
+      }
+    </style>
   </head>
   <body>
     <h1>My Chat Bot</h1>
+    <div id="chatbox">
+      <!-- this div will be used to display the chat history -->
+    </div>
     <form>
       <label for="message">Enter your message:</label><br>
       <input type="text" id="message" name="message"><br>
       <button type="button" onclick="sendMessage()">Send</button>
     </form> 
-    <div id="chatbox"></div>
   </body>
 </html>
+
 
 
 <script>
